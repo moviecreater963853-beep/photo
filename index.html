@@ -351,9 +351,14 @@
                             <input name="Email" class="w-full bg-[#1b1c1d] border border-gray-600 rounded-md focus:border-tertiary focus:ring-1 focus:ring-tertiary px-4 py-3 text-sm text-white placeholder-gray-500 shadow-sm transition-all focus:outline-none" placeholder="email@example.com" type="email" required/>
                         </div>
                     </div>
-                    <div class="space-y-2">
-                        <label class="font-label text-[10px] uppercase tracking-widest text-gray-400 block mb-2 cursor-pointer">Inquiry Type</label>
-                        <select name="Inquiry" class="w-full bg-[#1b1c1d] border border-gray-600 rounded-md focus:border-tertiary focus:ring-1 focus:ring-tertiary px-4 py-3 text-sm text-white shadow-sm transition-all cursor-pointer focus:outline-none">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="font-label text-[10px] uppercase tracking-widest text-gray-400 block mb-2 cursor-pointer">Phone Number</label>
+                            <input name="Phone" class="w-full bg-[#1b1c1d] border border-gray-600 rounded-md focus:border-tertiary focus:ring-1 focus:ring-tertiary px-4 py-3 text-sm text-white placeholder-gray-500 shadow-sm transition-all focus:outline-none" placeholder="+91 98765 43210" type="tel" required/>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="font-label text-[10px] uppercase tracking-widest text-gray-400 block mb-2 cursor-pointer">Inquiry Type</label>
+                            <select name="Inquiry" class="w-full bg-[#1b1c1d] border border-gray-600 rounded-md focus:border-tertiary focus:ring-1 focus:ring-tertiary px-4 py-3 text-sm text-white shadow-sm transition-all cursor-pointer focus:outline-none">
                             <option value="Academy Enrollment">Academy Enrollment</option>
                             <option value="Portrait Session">Portrait Session</option>
                             <option value="Commercial Photography">Commercial Photography</option>
