@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bright Light Photography Studio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Inter:wght@300;400;500;600&amp;family=Public+Sans:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#c4c6ce",
+                    "primary-container": "#686b72",
+                    "tertiary": "#dcc661",
+                    "tertiary-container": "#bfab49",
+                    "surface-variant": "#343536",
+                    "on-secondary-fixed": "#171c20",
+                    "on-primary": "#2d3037",
+                    "on-tertiary": "#393000",
+                    "on-secondary": "#2c3135",
+                    "inverse-primary": "#5b5e66",
+                    "secondary-fixed": "#dfe3e8",
+                    "secondary": "#c2c7cc",
+                    "on-primary-fixed": "#181c22",
+                    "surface-container-low": "#1b1c1d",
+                    "surface-container": "#1f2021",
+                    "outline-variant": "#434653",
+                    "on-tertiary-fixed-variant": "#524600",
+                    "surface-container-lowest": "#0d0e0f",
+                    "surface-container-high": "#292a2b",
+                    "inverse-on-surface": "#303031",
+                    "on-primary-fixed-variant": "#44474e",
+                    "surface-container-highest": "#343536",
+                    "surface": "#121314",
+                    "tertiary-fixed-dim": "#dcc661",
+                    "on-surface": "#e3e2e3",
+                    "error-container": "#93000a",
+                    "secondary-container": "#42474b",
+                    "on-background": "#e3e2e3",
+                    "primary-fixed-dim": "#c4c6ce",
+                    "on-secondary-container": "#b1b6ba",
+                    "on-tertiary-fixed": "#211b00",
+                    "surface-dim": "#121314",
+                    "secondary-fixed-dim": "#c2c7cc",
+                    "outline": "#8d909e",
+                    "error": "#ffb4ab",
+                    "on-secondary-fixed-variant": "#42474b",
+                    "background": "#121314",
+                    "on-primary-container": "#eaecf4",
+                    "on-error-container": "#ffdad6",
+                    "primary": "#c4c6ce",
+                    "tertiary-fixed": "#f9e37a",
+                    "on-surface-variant": "#c3c6d5",
+                    "on-error": "#690005",
+                    "surface-bright": "#38393a",
+                    "primary-fixed": "#e0e2eb",
+                    "inverse-surface": "#e3e2e3",
+                    "on-tertiary-container": "#4a3f00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Inter"],
+                    "label": ["Public Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: #0d0e0f; color: #e3e2e3; }
+        h1, h2, h3, .serif-italic { font-family: 'Noto Serif', serif; }
+        .serif-italic { font-style: italic; }
+        input, textarea, select {
+            pointer-events: auto !important;
+            position: relative;
+            z-index: 50;
+        }
+    </style>
+</head>
+<body class="bg-surface-container-lowest text-on-surface selection:bg-tertiary selection:text-on-tertiary">
+
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-neutral-950/80 backdrop-blur-xl flex justify-between items-center px-6 md:px-12 py-6 max-w-full mx-auto shadow-sm">
+    <div class="text-xl md:text-2xl font-bold tracking-tighter text-neutral-50 dark:text-neutral-50 font-headline italic">
+        <a href="#home">BRIGHT LIGHT</a>
+    </div>
+    <div class="hidden md:flex items-center space-x-10">
+        <a class="text-neutral-400 font-noto-serif italic tracking-wide hover:text-amber-100 transition-colors duration-300" href="#home">Studio</a>
+        <a class="text-neutral-400 font-noto-serif italic tracking-wide hover:text-amber-100 transition-colors duration-300" href="#portfolio">Gallery</a>
+        <a class="text-neutral-400 font-noto-serif italic tracking-wide hover:text-amber-100 transition-colors duration-300" href="#services">Services</a>
+        <a class="text-neutral-400 font-noto-serif italic tracking-wide hover:text-amber-100 transition-colors duration-300" href="#academy">Academy</a>
+        <a class="text-amber-200 border-b border-amber-200/30 pb-1 font-noto-serif italic tracking-wide hover:text-amber-100 transition-colors duration-300" href="#contact">Contact</a>
+    </div>
+    <!-- Fixed Book Session Button to explicitly be a clickable link targeting contact form -->
+    <a href="#contact" class="inline-flex items-center justify-center bg-gradient-to-r from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-sm font-label uppercase tracking-widest text-xs font-bold hover:scale-[1.02] hover:opacity-90 transition-all duration-300 shadow-xl cursor-pointer pointer-events-auto">
+        Book Session
+    </a>
+</nav>
+
+<main>
+    <!-- Section 1: Hero -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <div class="absolute inset-0 z-0">
+            <img alt="Dramatic couple portrait" class="w-full h-full object-cover opacity-60" src="https://lh3.googleusercontent.com/aida/ADBb0uiYGuoaf62YrGiF6TF1v6Oo3TI1qkd1qRnsm1uS1uLYR7b71UAJcvJVuERPWzx6XCDzIeLNUlM_KaJyiaYyu-p3uliZRx3WIFA2zuTAKVbCZ8d2wNY1ylF8qDJrRMagM2stdo9hofeuAMMIfzUpKBBpk1y7Hpph28iD9_DBcSMf4yIa8us9o7_H91w7FxYrgFd_2uRUs2D6Fy_lHmWF7f6oscN4BKCjwjfx16x2KljipxPjS-3DzeMMh29ea3M8oBtmdH0BN1C6pDk"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+        </div>
+        <div class="relative z-10 text-center max-w-4xl px-6">
+            <span class="font-label text-tertiary text-xs tracking-[0.4em] uppercase mb-4 block">Est. 2003</span>
+            <h1 class="font-headline text-6xl md:text-8xl mb-6 leading-tight text-white">Your Story, <span class="serif-italic">Our Lens</span></h1>
+            <p class="font-body text-lg text-on-surface-variant max-w-xl mx-auto font-light leading-relaxed">
+                Capturing the ephemeral beauty of the human experience through high-end editorial artistry and two decades of photographic mastery.
+            </p>
+            <div class="mt-12 flex flex-col md:flex-row gap-6 justify-center items-center">
+                <a href="#portfolio" class="group flex items-center gap-4 font-label text-[10px] tracking-widest uppercase cursor-pointer">
+                    <span class="w-12 h-px bg-tertiary group-hover:w-20 transition-all duration-500"></span>
+                    Explore Portfolios
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Heritage -->
+    <section class="py-32 px-6 md:px-12 bg-surface-dim">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+            <div class="lg:col-span-5">
+                <h2 class="font-label text-tertiary text-xs tracking-[0.4em] uppercase mb-8">The Legacy</h2>
+                <h3 class="font-headline text-4xl md:text-5xl mb-8 leading-tight">21 Years of Mastery in <span class="serif-italic text-tertiary">Diva</span></h3>
+                <div class="space-y-6 text-on-surface-variant font-body leading-relaxed text-lg">
+                    <p>Since our inception, Bright Light has remained at the forefront of editorial photography. We don't just take pictures; we curate memories into archival masterpieces.</p>
+                    <p>Our studio in Diva serves as a sanctuary for creativity, where light is sculpted and moments are preserved with scholarly precision. From high-fashion editorials to intimate portraits, our heritage is built on the pursuit of perfection.</p>
+                </div>
+                <div class="mt-12 flex items-baseline gap-4">
+                    <span class="font-headline text-6xl text-tertiary">21</span>
+                    <span class="font-label text-[10px] tracking-widest uppercase text-on-surface-variant">Years of uncompromising excellence</span>
+                </div>
+            </div>
+            <div class="lg:col-span-7 grid grid-cols-2 gap-4">
+                <div class="aspect-[3/4] bg-surface-container-high rounded-sm overflow-hidden translate-y-12 shadow-2xl">
+                    <img alt="Featured editorial work 1" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-Pt35DzrbvWuOL0sFYzuONG47zVtvcBJ2f44KpAESWfUXIkxdhJWas6u_SUGocHlZbTk960GJcsW9-kyWK0O-Rac8dKwZTpOJKbvwNb3m3CwLCNGE6tpcp0Ywf7Myl41YFqB4Y9MZ_cCoHTVqD-4CXniGGXVjjaR3yB1kHjAFV_Cbbs8omxty5kPRhRYqS69jGgZLqg0eslHtW_CMvVorT3H-I-scG5AGy9MGhERV6Q1tVq4wsi54Jrr34xlip2zrUgu-lAfdTpsj"/>
+                </div>
+                <div class="aspect-[3/4] bg-surface-container-high rounded-sm overflow-hidden shadow-2xl">
+                    <img alt="Featured editorial work 2" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHwWQyJtkJk9DWXeJPIOIZ4i2cxL0aSS8Cma0IqdPnSNQ0UNw4FFIHkXQFSas2VEo3g1O5tNe9fLvM1Qp4W-XwGSekD-T-EiSHbPSKwx8jkCqRjKl0x5b0tJ7RO-kFY2DYYr3E-SciFVQU_aja0pUGqH1aSk8poAp1MK_uQfcp6A35NXHWYw2AhWMthkNbMSnqRGQR8A_6j10avq6zaG5k4hCzuhaGGD5WO6sVR8_BxYLiCZGmCG_S8o1XJNFGpe7BKh48oWolv11U"/>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Portfolio -->
+    <section id="portfolio" class="py-32 px-6 md:px-12 bg-surface-container-lowest">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div class="max-w-md">
+                    <h2 class="font-label text-tertiary text-xs tracking-[0.4em] uppercase mb-4">Curated Portfolio</h2>
+                    <h3 class="font-headline text-4xl">Selected <span class="serif-italic">Exhibitions</span></h3>
+                </div>
+                <a class="font-label text-[10px] tracking-[0.2em] uppercase border-b border-outline-variant pb-2 hover:border-tertiary transition-colors" href="#services">View Services</a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+                <!-- Large Image -->
+                <div class="md:col-span-8 group relative overflow-hidden bg-surface-container aspect-video rounded-sm">
+                    <img alt="Main Portfolio Piece" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/ADBb0uiUKGR-2p8gwDD21aM0nPPN6H2kVCInyR70CDkXC-FOfI_i4izEsbwzKwFRtcsb4RDLXEH3ya07tz72ifHfhI1WyT1TteoZW7XDJzNQXulXo3_Ij-zTg8-sT4-0wtHXNr6Riw-vNMlZ1blh9Vi7G76N5PGP-k0sSKTTcEXDadrXgbwMt-T-jCLyWmSOGHvOCxelkBN9DvZZcaqMPy8rPm_JgAGLdSytcEitf9WH0ketpdwZYeYNrqfRdrIFLX0lOb5lA8LSLNTi1A"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 to-transparent flex flex-col justify-end p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <span class="font-label text-[10px] tracking-[0.2em] uppercase text-tertiary">Editorial / 2024</span>
+                        <h4 class="font-headline text-2xl mt-2">Ethereal Maternity</h4>
+                    </div>
+                </div>
+                <!-- Tall Image -->
+                <div class="md:col-span-4 group relative overflow-hidden bg-surface-container aspect-[3/5] rounded-sm">
+                    <img alt="Vertical Portfolio Piece" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/ADBb0ugOueHk6Pw3Pgpur13464kjJj4XEQ0EUeFf6E6d2Uj5RUFUJadkrAnM9nSPCZ39wyL1IYhEBaMD6-6mRPPjgJ71NvaTjbjP7T-Q00OheA9f_JBDaFt9SdVAcky2Mj6x8vW43R7ysHgW_o-tm1Q2643e-OI-84miKJuv-t9dMBmqjfVRjSGZfvra42tgJvGbiiE6EsPc6oYiZo87y6z53lRV5ShYMzIw39bM7ZOHYmieNnO9eRNRWIt7Anx2vNjPXU-BYs3Kt6NhSEQ"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 to-transparent flex flex-col justify-end p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <span class="font-label text-[10px] tracking-[0.2em] uppercase text-tertiary">Portrait / 2023</span>
+                        <h4 class="font-headline text-2xl mt-2">Traditional Elegance</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Services / Disciplines -->
+    <section id="services" class="px-6 md:px-12 py-32 bg-[#101112]">
+        <div class="max-w-7xl mx-auto mb-20 text-center md:text-left">
+            <span class="font-label uppercase tracking-[0.4em] text-tertiary text-xs mb-6 block">The Digital Curator</span>
+            <h1 class="text-5xl md:text-7xl leading-tight mb-8">Artistry in <br/><i class="font-noto-serif italic text-tertiary">Every Frame.</i></h1>
+            <p class="font-body text-on-surface-variant text-lg max-w-xl leading-relaxed mx-auto md:mx-0">
+                A dual-purpose sanctuary for high-end visual storytelling and scholarly technical education. We don't just capture moments; we curate legacies.
+            </p>
+        </div>
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Wedding Cinema -->
+            <div class="md:col-span-2 relative group overflow-hidden rounded-lg aspect-video md:aspect-auto h-[500px] md:h-[600px] bg-surface-container-low shadow-xl">
+                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" src="https://lh3.googleusercontent.com/aida/ADBb0uiYGuoaf62YrGiF6TF1v6Oo3TI1qkd1qRnsm1uS1uLYR7b71UAJcvJVuERPWzx6XCDzIeLNUlM_KaJyiaYyu-p3uliZRx3WIFA2zuTAKVbCZ8d2wNY1ylF8qDJrRMagM2stdo9hofeuAMMIfzUpKBBpk1y7Hpph28iD9_DBcSMf4yIa8us9o7_H91w7FxYrgFd_2uRUs2D6Fy_lHmWF7f6oscN4BKCjwjfx16x2KljipxPjS-3DzeMMh29ea3M8oBtmdH0BN1C6pDk"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/40 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 p-8 md:p-12">
+                    <h3 class="text-4xl text-neutral-50 mb-4">Wedding Cinema</h3>
+                    <p class="text-neutral-300 font-body max-w-md mb-6">Elevated storytelling for once-in-a-lifetime unions. We blend editorial precision with raw, cinematic emotion.</p>
+                </div>
+            </div>
+            <!-- Portrait Editorial -->
+            <div class="relative group overflow-hidden rounded-lg h-[500px] md:h-[600px] bg-surface-container-low shadow-xl">
+                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" src="https://lh3.googleusercontent.com/aida/ADBb0ugOueHk6Pw3Pgpur13464kjJj4XEQ0EUeFf6E6d2Uj5RUFUJadkrAnM9nSPCZ39wyL1IYhEBaMD6-6mRPPjgJ71NvaTjbjP7T-Q00OheA9f_JBDaFt9SdVAcky2Mj6x8vW43R7ysHgW_o-tm1Q2643e-OI-84miKJuv-t9dMBmqjfVRjSGZfvra42tgJvGbiiE6EsPc6oYiZo87y6z53lRV5ShYMzIw39bM7ZOHYmieNnO9eRNRWIt7Anx2vNjPXU-BYs3Kt6NhSEQ"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/40 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 p-8 md:p-12">
+                    <h3 class="text-3xl text-neutral-50 mb-4">Editorial</h3>
+                    <p class="text-neutral-300 font-body">Curated visual narratives for brands and personal portfolios.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Academy -->
+    <section id="academy" class="bg-surface-container-lowest py-32 px-6 md:px-12 border-t border-b border-outline-variant/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-baseline mb-16 gap-8 text-center md:text-left">
+                <div>
+                    <h2 class="text-5xl md:text-6xl mb-4 text-white">The Academy</h2>
+                    <p class="font-body text-on-surface-variant max-w-xl mx-auto md:mx-0">Scholarly instruction for the modern photographer. From technical foundations to editorial curation.</p>
+                </div>
+            </div>
+            <div class="mb-12 rounded-lg overflow-hidden h-64 relative group shadow-2xl">
+                <img alt="Academy Showcase" class="w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity" src="https://lh3.googleusercontent.com/aida/ADBb0uiUKGR-2p8gwDD21aM0nPPN6H2kVCInyR70CDkXC-FOfI_i4izEsbwzKwFRtcsb4RDLXEH3ya07tz72ifHfhI1WyT1TteoZW7XDJzNQXulXo3_Ij-zTg8-sT4-0wtHXNr6Riw-vNMlZ1blh9Vi7G76N5PGP-k0sSKTTcEXDadrXgbwMt-T-jCLyWmSOGHvOCxelkBN9DvZZcaqMPy8rPm_JgAGLdSytcEitf9WH0ketpdwZYeYNrqfRdrIFLX0lOb5lA8LSLNTi1A"/>
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <span class="font-label uppercase tracking-[0.5em] text-xs text-white">Technical Excellence</span>
+                </div>
+            </div>
+            <!-- Courses -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="group p-10 bg-surface-dim hover:bg-[#1a1b1d] transition-colors duration-500 rounded-lg shadow-lg border border-transparent hover:border-outline-variant/20">
+                    <span class="font-label text-[10px] text-tertiary mb-3 block tracking-widest">COURSE 01</span>
+                    <h4 class="text-3xl font-headline mb-4 group-hover:text-tertiary transition-colors text-white">Lighting as Language</h4>
+                    <p class="font-body text-on-surface-variant text-sm mb-8 leading-relaxed">A deep dive into Chiaroscuro, high-key editorial, and the physics of light shaping.</p>
+                    <div class="flex justify-between items-center border-t border-outline-variant/10 pt-4">
+                        <span class="font-label text-[10px] tracking-widest uppercase text-gray-400">8 Weeks | Hybrid</span>
+                        <a href="#contact" class="text-tertiary text-[10px] uppercase tracking-widest font-bold">Enroll Now</a>
+                    </div>
+                </div>
+                <div class="group p-10 bg-surface-dim hover:bg-[#1a1b1d] transition-colors duration-500 rounded-lg shadow-lg border border-transparent hover:border-outline-variant/20">
+                    <span class="font-label text-[10px] text-tertiary mb-3 block tracking-widest">COURSE 02</span>
+                    <h4 class="text-3xl font-headline mb-4 group-hover:text-tertiary transition-colors text-white">The Digital Negative</h4>
+                    <p class="font-body text-on-surface-variant text-sm mb-8 leading-relaxed">Advanced post-production workflows focusing on skin retouching and architectural color grading.</p>
+                    <div class="flex justify-between items-center border-t border-outline-variant/10 pt-4">
+                        <span class="font-label text-[10px] tracking-widest uppercase text-gray-400">4 Weeks | Intensive</span>
+                        <a href="#contact" class="text-tertiary text-[10px] uppercase tracking-widest font-bold">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Mentors -->
+    <section class="py-32 px-6 md:px-12 max-w-7xl mx-auto bg-background">
+        <div class="mb-24 text-center max-w-2xl mx-auto">
+            <span class="font-label uppercase tracking-widest text-tertiary text-xs mb-4 block">The Mentors</span>
+            <h2 class="font-headline text-5xl font-bold mb-6 text-white">Visionary Leadership</h2>
+            <p class="font-body text-on-surface-variant">Our team is composed of industry veterans dedicated to the craft of the still and moving image.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="group mx-auto max-w-md w-full">
+                <div class="relative overflow-hidden aspect-[3/4] mb-8 grayscale hover:grayscale-0 transition-all duration-1000 rounded-lg shadow-2xl">
+                    <img alt="Aditya Verma" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0ugOueHk6Pw3Pgpur13464kjJj4XEQ0EUeFf6E6d2Uj5RUFUJadkrAnM9nSPCZ39wyL1IYhEBaMD6-6mRPPjgJ71NvaTjbjP7T-Q00OheA9f_JBDaFt9SdVAcky2Mj6x8vW43R7ysHgW_o-tm1Q2643e-OI-84miKJuv-t9dMBmqjfVRjSGZfvra42tgJvGbiiE6EsPc6oYiZo87y6z53lRV5ShYMzIw39bM7ZOHYmieNnO9eRNRWIt7Anx2vNjPXU-BYs3Kt6NhSEQ"/>
+                    <div class="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-neutral-950 via-neutral-950/80 to-transparent">
+                        <h3 class="font-headline text-3xl font-bold text-white">Aditya Verma</h3>
+                        <p class="font-label text-[10px] uppercase tracking-widest text-tertiary mt-2">Founder &amp; Lead Curator</p>
+                    </div>
+                </div>
+                <p class="font-body text-sm leading-relaxed text-on-surface-variant text-center md:text-left">A master of light and tradition, Aditya specializes in capturing the regal elegance of Indian heritage, blending classical portraiture with a modern, cinematic touch.</p>
+            </div>
+            <div class="group mx-auto max-w-md w-full md:mt-24">
+                <div class="relative overflow-hidden aspect-[3/4] mb-8 grayscale hover:grayscale-0 transition-all duration-1000 rounded-lg shadow-2xl">
+                    <img alt="Meera Nair" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0ugBahjenud1qKpYfBOHk3AEYKLF9z5NrP8liyk-6wN4G5CbN8LXXU2xYj_uXBszGUCE1Q5Dg-6PEWEuIcAjltYdqCoMkxKL8yPBqMUkFviesPL9OThD2AfCOOrm4ynh32SZFsM72mP1Lb6EUdk5UM9YC0eFuWtopdid-p7r-o7JRAnE7Ww1L-Kj_QEeDSz0hRyf33NPbrdhoF6p1zwRLAOr-lf7aT8-3l_iXEA-HxyihMGCm1YsvmQqVaHmDDEs7Jsvv9eGAkpF7EM"/>
+                    <div class="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-neutral-950 via-neutral-950/80 to-transparent">
+                        <h3 class="font-headline text-3xl font-bold text-white">Meera Nair</h3>
+                        <p class="font-label text-[10px] uppercase tracking-widest text-tertiary mt-2">Director of Academy</p>
+                    </div>
+                </div>
+                <p class="font-body text-sm leading-relaxed text-on-surface-variant text-center md:text-left">Meera leads our fine-art division, bringing a delicate and soulful perspective to maternity and child portraiture, freezing moments of pure innocence and joy.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Contact Form & Info -->
+    <section id="contact" class="max-w-7xl mx-auto px-6 py-24 grid grid-cols-1 lg:grid-cols-12 gap-16 border-t border-outline-variant/10 mt-12 mb-12">
+        <div class="lg:col-span-5 space-y-16">
+            <div class="space-y-8">
+                <h2 class="text-4xl italic text-white font-headline">Reserve a Session</h2>
+                <p class="text-on-surface-variant font-body leading-relaxed max-w-md">
+                    Our Diva studio is an open sanctuary for creative expression. Fill out the form to reserve a slot for photography or academy enrollments.
+                </p>
+            </div>
+            <div class="space-y-10">
+                <div class="flex items-start space-x-6">
+                    <div class="mt-1 p-3 bg-surface-container-high rounded-full text-tertiary shadow-md">
+                        <span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+                    </div>
+                    <div>
+                        <p class="font-label uppercase tracking-widest text-[10px] text-tertiary mb-2">Location</p>
+                        <p class="text-on-surface font-body text-sm leading-loose">
+                            Shop No.2, C Wing, Mumbra Devi Colony Rd,<br/>
+                            Near Siddheshwar Gym, Behind Diva Post Office,<br/>
+                            Diva East, Thane, Maharashtra 400612
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-6">
+                    <div class="mt-1 p-3 bg-surface-container-high rounded-full text-tertiary shadow-md">
+                        <span class="material-symbols-outlined" data-icon="mail">mail</span>
+                    </div>
+                    <div>
+                        <p class="font-label uppercase tracking-widest text-[10px] text-tertiary mb-2">Electronic Mail</p>
+                        <p class="text-white font-body text-lg">businesstoxic49@gmail.com</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-6">
+                    <div class="mt-1 p-3 bg-surface-container-high rounded-full text-tertiary shadow-md">
+                        <span class="material-symbols-outlined" data-icon="call">call</span>
+                    </div>
+                    <div>
+                        <p class="font-label uppercase tracking-widest text-[10px] text-tertiary mb-2">Direct Line</p>
+                        <p class="text-white font-body text-lg">+91 9702287009</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Fully Working Contact Form -->
+        <div class="lg:col-span-7 relative z-10">
+            <div class="bg-[#151618] p-8 md:p-12 border border-outline-variant/20 rounded-xl shadow-2xl">
+                <h2 class="text-3xl mb-8 text-white font-headline">Reserve a Consultation</h2>
+                <form class="space-y-6" action="mailto:businesstoxic49@gmail.com" method="post" enctype="text/plain">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="font-label text-[10px] uppercase tracking-widest text-gray-400 block mb-2 cursor-pointer">Full Name</label>
+                            <input name="Name" class="w-full bg-[#1b1c1d] border border-gray-600 rounded-md focus:border-tertiary focus:ring-1 focus:ring-tertiary px-4 py-3 text-sm text-white placeholder-gray-500 shadow-sm transition-all focus:outline-none" placeholder="Johnathan Doe" type="text" required/>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="font-label text-[10px] uppercase tracking-widest text-gray-400 block mb-2 cursor-pointer">Email Address</label>
+                            <input name="Email" class="w-full bg-[#1b1c1d] border border-gray-600 rounded-md focus:border-tertiary focus:ring-1 focus:ring-tertiary px-4 py-3 text-sm text-white placeholder-gray-500 shadow-sm transition-all focus:outline-none" placeholder="email@example.com" type="email" required/>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="font-label text-[10px] uppercase tracking-widest text-gray-400 block mb-2 cursor-pointer">Inquiry Type</label>
+                        <select name="Inquiry" class="w-full bg-[#1b1c1d] border border-gray-600 rounded-md focus:border-tertiary focus:ring-1 focus:ring-tertiary px-4 py-3 text-sm text-white shadow-sm transition-all cursor-pointer focus:outline-none">
+                            <option value="Academy Enrollment">Academy Enrollment</option>
+                            <option value="Portrait Session">Portrait Session</option>
+                            <option value="Commercial Photography">Commercial Photography</option>
+                            <option value="Event Coverage">Event Coverage</option>
+                        </select>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="font-label text-[10px] uppercase tracking-widest text-gray-400 block mb-2 cursor-pointer">Message</label>
+                        <textarea name="Message" class="w-full bg-[#1b1c1d] border border-gray-600 rounded-md focus:border-tertiary focus:ring-1 focus:ring-tertiary px-4 py-3 text-sm text-white placeholder-gray-500 shadow-sm transition-all focus:outline-none" placeholder="Describe your vision..." rows="5" required></textarea>
+                    </div>
+                    <button class="w-full mt-4 bg-gradient-to-r from-primary to-primary-container text-on-primary py-4 rounded-md font-label uppercase tracking-widest text-xs font-bold hover:scale-[1.01] hover:opacity-90 shadow-xl transition-all duration-300" type="submit">
+                        Send Transmission
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="w-full h-[500px] bg-surface-dim relative overflow-hidden group">
+        <div class="absolute inset-0 grayscale contrast-125 opacity-70 group-hover:grayscale-0 transition-all duration-700">
+            <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZUw7Xw2ajnE565LxyfaUWwbSS6hqNwDI-ZbYkkCzvbQ-MNWTRiV5WNarEwC4s349bNUz1ug74Iquu6Jt27ncB4HlQg8FQIoHLS30pgP0ap_kZZn5I4IpFigE_dsPVzu6ma9prxyQXbGShyy5k22XVWwVdaAagEBLhKX5PNo_3XqkqJs34S5NJ2vLENod-wa58O9LafFUbPJQc0eKs4nISSp_QMldEckLelG4McwDnooiNrhihdEqIjenWrxTpnqaEJYE-8ZyvPzFp"/>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/50"></div>
+        <div class="absolute bottom-12 left-12 bg-neutral-950/90 backdrop-blur-md p-6 max-w-xs border border-tertiary/20 rounded-md shadow-2xl">
+            <h3 class="text-amber-200 text-xl mb-2 italic font-headline">Visit Us</h3>
+            <p class="text-xs font-label text-neutral-400 tracking-wider leading-relaxed">Shop No.2, C Wing, Mumbra Devi Colony Rd, Diva East, Thane</p>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="w-full pt-20 pb-12 bg-neutral-950 flex flex-col items-center justify-center space-y-8 px-8">
+    <div class="text-2xl font-bold text-neutral-50 font-headline italic tracking-tighter">
+        <a href="#home">BRIGHT LIGHT</a>
+    </div>
+    <div class="flex flex-wrap justify-center gap-6 md:gap-12">
+        <a class="font-public-sans uppercase tracking-[0.2em] text-[10px] text-neutral-500 hover:text-amber-200 transition-all duration-300" href="#">Privacy Policy</a>
+        <a class="font-public-sans uppercase tracking-[0.2em] text-[10px] text-neutral-500 hover:text-amber-200 transition-all duration-300" href="#">Terms of Service</a>
+        <a class="font-public-sans uppercase tracking-[0.2em] text-[10px] text-neutral-500 hover:text-amber-200 transition-all duration-300" href="#">Careers</a>
+        <a class="font-public-sans uppercase tracking-[0.2em] text-[10px] text-neutral-500 hover:text-amber-200 transition-all duration-300" href="#">Press Kit</a>
+    </div>
+    <div class="pt-8 border-t border-neutral-900 w-full max-w-4xl text-center">
+        <p class="font-public-sans uppercase tracking-[0.2em] text-[10px] text-neutral-600">
+            © 2024 BRIGHT LIGHT PHOTOGRAPHY STUDIO &amp; ACADEMY. ALL RIGHTS RESERVED.
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
